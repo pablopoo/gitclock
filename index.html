@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GitClock</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="stage" aria-label="Reloj estilo diff">
+      <section class="diff-card" aria-live="polite">
+        <div class="diff-list">
+          <div class="diff-item diff-item-current diff-header">
+            <span class="file">clock.now</span>
+            <time class="time-value" id="clock-value" datetime="00:00:00">00:00:00</time>
+            <span class="stats">
+              <span class="added" id="header-added">+00</span>
+              <span class="removed" id="header-removed">-24</span>
+            </span>
+          </div>
+          <div class="diff-item">
+            <span class="file">hours.js</span>
+            <span class="stats">
+              <span class="added" id="hours-added">+00</span>
+              <span class="removed" id="hours-removed">-24</span>
+            </span>
+          </div>
+          <div class="diff-item">
+            <span class="file">minutes.js</span>
+            <span class="stats">
+              <span class="added" id="minutes-added">+00</span>
+              <span class="removed" id="minutes-removed">-60</span>
+            </span>
+          </div>
+          <div class="diff-item">
+            <span class="file">seconds.js</span>
+            <span class="stats">
+              <span class="added" id="seconds-added">+00</span>
+              <span class="removed" id="seconds-removed">-60</span>
+            </span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

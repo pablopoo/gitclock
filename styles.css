@@ -1,0 +1,107 @@
+:root {
+  color-scheme: dark;
+  --bg: #080a0d;
+  --text: #e6edf3;
+  --line: #2b3138;
+  --green-bright: #3fb950;
+  --red-soft: #f85149;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 42%),
+    radial-gradient(circle at 50% 0%, rgba(46, 160, 67, 0.12), transparent 35%),
+    var(--bg);
+  color: var(--text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+.stage {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.diff-card {
+  width: min(92vw, 370px);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #242424;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.34);
+}
+
+.diff-list {
+  display: grid;
+}
+
+.diff-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: #242424;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.diff-item:last-child {
+  border-bottom: 0;
+}
+
+.diff-item-current {
+  min-height: 54px;
+  background: #1f1f1f;
+}
+
+.diff-header {
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+}
+
+.diff-header .stats {
+  justify-self: end;
+}
+
+.file {
+  overflow: hidden;
+  color: var(--text);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.time-value {
+  color: var(--text);
+  font-size: 20px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.stats {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  line-height: 1;
+}
+
+.added,
+.removed {
+  display: inline-block;
+  line-height: 1;
+}
+
+.added {
+  color: var(--green-bright);
+}
+
+.removed {
+  color: var(--red-soft);
+}
